@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
 
     'core',
+    'hotel',
 ]
 
 MIDDLEWARE = [

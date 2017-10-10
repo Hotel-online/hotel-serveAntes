@@ -31,7 +31,7 @@ class Habitacion(models.Model):
         verbose_name_plural = "Habitaciones"
 
     def __str__(self):
-        return '%s' % (self.nombre, self.codigo)
+        return '%s' % (self.nombre)
 
 
 class Forma_de_pago(models.Model):
@@ -87,7 +87,7 @@ class DetalleReservacion(models.Model):
         verbose_name_plural = "DetalleReservaciones"
 
     def __str__(self):
-        return '%s (%s)' % (self.habitacionesR)
+        return '%s ' % (self.habitacionesR)
 
 
 class Venta(models.Model):
@@ -107,15 +107,14 @@ class Venta(models.Model):
 
 class Doc_Type(models.Model):
 
-    bol = models.BooleanField(default=True)
-    fac = models.BooleanField(default=False)
+    tipo_documento = models.CharField(max_length=15)
 
     class Meta:
         verbose_name = "Doc_Type"
         verbose_name_plural = "Doc_Types"
 
     def __str__(self):
-        return '%s' % (self.doc_type)
+        return '%s' % (self.tipo_documento)
 
 
 class DetalleVenta(models.Model):

@@ -105,10 +105,24 @@ class Venta(models.Model):
         return '%s' % (self.nro_doc)
 
 
+class Doc_Type(models.Model):
+
+    bol = models.BooleanField(default=True)
+    fac = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = "Doc_Type"
+        verbose_name_plural = "Doc_Types"
+
+    def __str__(self):
+        return '%s' % (self.doc_type)
+
+
 class DetalleVenta(models.Model):
 
     detalle = models.TextField(null=True, blank=True)
     venta = models.ForeignKey(Venta)
+    doc_type = models.ForeignKey(Doc_Type)
 
     class Meta:
         verbose_name = "DetalleVenta"

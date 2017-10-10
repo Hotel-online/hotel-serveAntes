@@ -7,6 +7,7 @@ from hotel.models import Forma_de_pago
 from hotel.models import Cliente
 from hotel.models import Venta
 from hotel.models import DetalleVenta
+from hotel.models import Doc_Type
 
 
 # Register your models here.
@@ -18,3 +19,4 @@ admin.site.register(Forma_de_pago)
 admin.site.register(Cliente)
 admin.site.register(Venta)
 admin.site.register(DetalleVenta)
+admin.site.register(Doc_Type)

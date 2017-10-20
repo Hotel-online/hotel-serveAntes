@@ -8,6 +8,7 @@ from hotel.models import Cliente
 from hotel.models import Venta
 from hotel.models import DetalleVenta
 from hotel.models import Doc_Type
+from hotel.models import Car
 
 
 # Register your models here.
@@ -20,3 +21,4 @@ admin.site.register(Cliente)
 admin.site.register(Venta)
 admin.site.register(DetalleVenta)
 admin.site.register(Doc_Type)
+admin.site.register(Car)
